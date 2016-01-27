@@ -22,7 +22,7 @@ pod "NGSButtonAnimator"
 
 ## Author
 
-Paulius Vindzigelskis, paulius.vindzigelskis@barclays.com
+Paulius Vindzigelskis
 
 ## License
 
