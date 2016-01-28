@@ -38,7 +38,12 @@
 
 -(void)updateColorsWithPrimaryColor:(UIColor *)primColor secondaryColor:(UIColor *)secColor
 {
-    if (![primColor isEqual:self.primaryColor] || ![secColor isEqual:self.secondaryColor])
+    [self updateColorsWithPrimaryColor:primColor secondaryColor:secColor forced:NO];
+}
+
+-(void)updateColorsWithPrimaryColor:(UIColor *)primColor secondaryColor:(UIColor *)secColor forced:(BOOL)forced
+{
+    if (forced || ![primColor isEqual:self.primaryColor] || ![secColor isEqual:self.secondaryColor])
     {
         self.primaryColor = primColor;
         self.secondaryColor = secColor;
@@ -90,7 +95,7 @@
     self.progressView = shapeView;
     self.progressView.hidden = YES;
     
-    [self updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
+    [self updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor forced:YES];
     
     [self updateView];
 }
