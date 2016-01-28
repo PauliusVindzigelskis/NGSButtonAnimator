@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.description      = "Animate button to spinner and vice versa."
 
   s.homepage         = "https://github.com/PauliusVindzigelskis/NGSButtonAnimator"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.author           = { "Paulius Vindzigelskis" => "info@newguystudio.com" }
   s.source           = { :git => "https://github.com/PauliusVindzigelskis/NGSButtonAnimator.git", :tag => "0.1.0" }
 
