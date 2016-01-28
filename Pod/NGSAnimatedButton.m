@@ -33,6 +33,13 @@
     return [self initWithPrimaryColor:nil secondaryColor:nil];
 }
 
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [self init];
+    self.frame = frame;
+    return self;
+}
+
 -(void)setPrimaryColor:(UIColor *)primaryColor
 {
     _primaryColor = primaryColor;
