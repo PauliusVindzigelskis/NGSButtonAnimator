@@ -18,12 +18,31 @@
 
 @implementation NGSAnimatedButton
 
--(instancetype)init
+-(instancetype)initWithPrimaryColor:(UIColor *)primColor secondaryColor:(UIColor *)secColor
 {
     if (self = [super init])
     {
+        _primaryColor = primColor;
+        _secondaryColor = secColor;
         [self setupAnimator];
     } return self;
+}
+
+-(instancetype)init
+{
+    return [self initWithPrimaryColor:nil secondaryColor:nil];
+}
+
+-(void)setPrimaryColor:(UIColor *)primaryColor
+{
+    _primaryColor = primaryColor;
+    [self setupAnimator];
+}
+
+-(void)setSecondaryColor:(UIColor *)secondaryColor
+{
+    _secondaryColor = secondaryColor;
+    [self setupAnimator];
 }
 
 - (void) setupAnimator
@@ -33,6 +52,8 @@
     
     _animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:firstColor secondaryColor:secondColor];
     [_animator setHighlighted:self.isHighlighted];
+    
+    [self setNeedsDisplay];
 }
 
 -(void)awakeFromNib
@@ -48,7 +69,7 @@
 -(void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
-
+    
     [self.animator updateView];
     
 }

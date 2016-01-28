@@ -16,4 +16,6 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor *primaryColor;
 @property (nonatomic, strong) IBInspectable UIColor *secondaryColor;
 
+- (instancetype) initWithPrimaryColor:(UIColor*)primColor secondaryColor:(UIColor*)secColor;
+
 @end
