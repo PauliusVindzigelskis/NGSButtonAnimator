@@ -7,7 +7,21 @@
 
 ## Usage
 
+### Using Xcode interface builder
 
+Add UIButton and change it's subclass to NGSAnimatedButton
+
+### Programatically
+
+```objc
+NGSAnimatedButton *button = [[NGSAnimatedButton alloc] initWithPrimaryColor:nil secondaryColor:nil];
+button.frame = CGRectMake(0, 0, 300, 50);
+button.center = CGPointMake(self.view.frame.size.width/2.f, self.view.frame.size.height/2.f);
+[button setTitle:@"Center button" forState:UIControlStateNormal];
+[button setPrimaryColor:[UIColor blueColor]];
+[button setSecondaryColor:[UIColor yellowColor]];
+[self.view addSubview:button];
+```
 
 ## Requirements
 
