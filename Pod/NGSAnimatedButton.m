@@ -40,22 +40,22 @@
     return self;
 }
 
--(void)setPrimaryColor:(UIColor *)primaryColor
-{
-    _primaryColor = primaryColor;
-    [self updateAnimator];
-}
-
--(void)setSecondaryColor:(UIColor *)secondaryColor
-{
-    _secondaryColor = secondaryColor;
-    [self updateAnimator];
-}
-
-- (void) updateAnimator
-{
+//-(void)setPrimaryColor:(UIColor *)primaryColor
+//{
+//    _primaryColor = primaryColor;
+//    [self updateAnimator];
+//}
+//
+//-(void)setSecondaryColor:(UIColor *)secondaryColor
+//{
+//    _secondaryColor = secondaryColor;
+//    [self updateAnimator];
+//}
+//
+//- (void) updateAnimator
+//{
 //    [self.animator updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
-}
+//}
 
 - (void) setupAnimator
 {
