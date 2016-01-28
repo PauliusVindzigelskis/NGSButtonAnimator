@@ -38,17 +38,20 @@
 
 -(void)updateColorsWithPrimaryColor:(UIColor *)primColor secondaryColor:(UIColor *)secColor
 {
-    self.primaryColor = primColor;
-    self.secondaryColor = secColor;
-    
-    self.progressView.strokeColor = primColor;
-    self.shape.strokeColor = primColor;
-    
-    
-    [self.button setTitleColor:secColor forState:UIControlStateHighlighted];
-    [self.button setTitleColor:primColor forState:UIControlStateNormal];
-    
-    [self setHighlighted:self.button.highlighted];
+    if (![primColor isEqual:self.primaryColor] || ![secColor isEqual:self.secondaryColor])
+    {
+        self.primaryColor = primColor;
+        self.secondaryColor = secColor;
+        
+        self.progressView.strokeColor = primColor;
+        self.shape.strokeColor = primColor;
+        
+        
+        [self.button setTitleColor:secColor forState:UIControlStateHighlighted];
+        [self.button setTitleColor:primColor forState:UIControlStateNormal];
+        
+        [self setHighlighted:self.button.highlighted];
+    }
 }
 
 -(void)lb_setup

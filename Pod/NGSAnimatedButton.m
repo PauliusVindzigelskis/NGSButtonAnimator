@@ -40,29 +40,40 @@
     return self;
 }
 
+- (void) fixColors
+{
+    self.primaryColor = _primaryColor ? : [UIColor blackColor];
+    self.secondaryColor = _secondaryColor ? : [UIColor whiteColor];
+}
+
 -(void)setPrimaryColor:(UIColor *)primaryColor
 {
     _primaryColor = primaryColor;
-    [self setupAnimator];
+    [self updateAnimator];
 }
 
 -(void)setSecondaryColor:(UIColor *)secondaryColor
 {
     _secondaryColor = secondaryColor;
-    [self setupAnimator];
+    [self updateAnimator];
+}
+
+- (void) updateAnimator
+{
+    [self.animator updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
 }
 
 - (void) setupAnimator
 {
-    UIColor *firstColor = self.primaryColor ? : [UIColor blackColor];
-    UIColor *secondColor = self.secondaryColor ? : [UIColor whiteColor];
+    [self fixColors];
     
     if (!self.animator)
     {
-        self.animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:firstColor secondaryColor:secondColor];
+        self.animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:self.primaryColor
+                                                   secondaryColor:self.secondaryColor];
         [self.animator setHighlighted:self.isHighlighted];
     } else {
-        [self.animator updateColorsWithPrimaryColor:firstColor secondaryColor:secondColor];
+        [self updateAnimator];
     }
     
     [self setNeedsDisplay];
@@ -77,7 +88,6 @@
 -(void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
-    
     [self.animator updateView];
     
 }
