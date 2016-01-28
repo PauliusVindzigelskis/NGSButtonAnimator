@@ -40,12 +40,6 @@
     return self;
 }
 
-- (void) fixColors
-{
-    self.primaryColor = _primaryColor ? : [UIColor blackColor];
-    self.secondaryColor = _secondaryColor ? : [UIColor whiteColor];
-}
-
 -(void)setPrimaryColor:(UIColor *)primaryColor
 {
     _primaryColor = primaryColor;
@@ -60,21 +54,17 @@
 
 - (void) updateAnimator
 {
-    [self.animator updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
+//    [self.animator updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
 }
 
 - (void) setupAnimator
 {
-    [self fixColors];
+    self.primaryColor = _primaryColor ? : [UIColor blackColor];
+    self.secondaryColor = _secondaryColor ? : [UIColor whiteColor];
     
-    if (!self.animator)
-    {
-        self.animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:self.primaryColor
-                                                   secondaryColor:self.secondaryColor];
-        [self.animator setHighlighted:self.isHighlighted];
-    } else {
-        [self updateAnimator];
-    }
+    self.animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:self.primaryColor
+                                               secondaryColor:self.secondaryColor];
+    [self.animator setHighlighted:self.isHighlighted];
     
     [self setNeedsDisplay];
 }

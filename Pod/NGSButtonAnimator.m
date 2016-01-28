@@ -51,6 +51,8 @@
         [self.button setTitleColor:primColor forState:UIControlStateNormal];
         
         [self setHighlighted:self.button.highlighted];
+        
+        [self updateView];
     }
 }
 
