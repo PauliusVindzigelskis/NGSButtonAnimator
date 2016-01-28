@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "NGSButtonAnimator.h"
 
+#ifndef IB_DESIGNABLE
+	#define IB_DESIGNABLE
+#endif
+#ifndef IBInspectable
+	#define IBInspectable
+#endif
+
 IB_DESIGNABLE
 @interface NGSAnimatedButton : UIButton
 
