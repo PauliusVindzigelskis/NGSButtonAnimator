@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01ACC8EAD927665D6A2DFAD9D33C4BD1 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AA393667BB397F9DC78C758D1A1398 /* ReplaceMe.m */; };
 		8285D5D1E3A5F249D0F99C4843155B60 /* NGSButtonAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC25B7AB992F83EBD0C34BEAA2AE939 /* NGSButtonAnimator-dummy.m */; };
 		92A4ED75808EF1DD6C95107183627FE5 /* Pods-NGSButtonAnimator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 873AAB3DC0B6F8B00E83416EE3C1FF91 /* Pods-NGSButtonAnimator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EEA20FD0F2C3B5E410807CDE55D1DE9 /* NGSButtonAnimator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74B8358D7F8211F6A033C615876031F7 /* NGSButtonAnimator.bundle */; };
@@ -15,6 +14,10 @@
 		BB27BF10217E0AD6599F12A054EA6FBA /* NGSButtonAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F27DE687A302A113FAF22A29CB82F01A /* NGSButtonAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09DA7F2D5A99681BCE3D0C02393D544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D28EED17036A883B27DB014F42C9A9F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D8D493151C5A0C1800A0F5E0 /* NGSAnimatedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D493111C5A0C1800A0F5E0 /* NGSAnimatedButton.h */; };
+		D8D493161C5A0C1800A0F5E0 /* NGSAnimatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D493121C5A0C1800A0F5E0 /* NGSAnimatedButton.m */; };
+		D8D493171C5A0C1800A0F5E0 /* NGSButtonAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D493131C5A0C1800A0F5E0 /* NGSButtonAnimator.h */; };
+		D8D493181C5A0C1800A0F5E0 /* NGSButtonAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D493141C5A0C1800A0F5E0 /* NGSButtonAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		0A0FDE3049D8B207F540EA4B90044A61 /* NGSButtonAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NGSButtonAnimator-prefix.pch"; sourceTree = "<group>"; };
 		1DE4B9D6DB0085D6D59BEFD3C1A83300 /* Pods-NGSButtonAnimator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NGSButtonAnimator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		23AA393667BB397F9DC78C758D1A1398 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		2CC25B7AB992F83EBD0C34BEAA2AE939 /* NGSButtonAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NGSButtonAnimator-dummy.m"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		63511A71100D3A774C50791958CE992F /* Pods-NGSButtonAnimator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NGSButtonAnimator_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C3C29A3CC732381AF15A8B9F0CAF2E52 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D294CA69DBAF00C6DF813B8F8ED836E9 /* Pods-NGSButtonAnimator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NGSButtonAnimator_Tests-resources.sh"; sourceTree = "<group>"; };
+		D8D493111C5A0C1800A0F5E0 /* NGSAnimatedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSAnimatedButton.h; sourceTree = "<group>"; };
+		D8D493121C5A0C1800A0F5E0 /* NGSAnimatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSAnimatedButton.m; sourceTree = "<group>"; };
+		D8D493131C5A0C1800A0F5E0 /* NGSButtonAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSButtonAnimator.h; sourceTree = "<group>"; };
+		D8D493141C5A0C1800A0F5E0 /* NGSButtonAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSButtonAnimator.m; sourceTree = "<group>"; };
 		E74BFC425941EC7EC0C6A762AF95629A /* NGSButtonAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NGSButtonAnimator.xcconfig; sourceTree = "<group>"; };
 		EFF07FE42A2036D3DB42BB983A33EF5F /* Pods_NGSButtonAnimator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NGSButtonAnimator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F273A058501452DECA58DFBD749C998B /* Pods-NGSButtonAnimator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NGSButtonAnimator_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -119,14 +125,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		7E9A61D17C2A65038014F1D966409E73 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8CC8E7E8B8C0551F8F4A6D73AAEC24C3 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		8AB6024CC3A942A639465A4B98A73BF4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,14 +143,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8CC8E7E8B8C0551F8F4A6D73AAEC24C3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				23AA393667BB397F9DC78C758D1A1398 /* ReplaceMe.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,10 +159,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		D8D493101C5A0C1800A0F5E0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D8D493111C5A0C1800A0F5E0 /* NGSAnimatedButton.h */,
+				D8D493121C5A0C1800A0F5E0 /* NGSAnimatedButton.m */,
+				D8D493131C5A0C1800A0F5E0 /* NGSButtonAnimator.h */,
+				D8D493141C5A0C1800A0F5E0 /* NGSButtonAnimator.m */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		EAB0E15F53B517C54A335388F5684DC0 /* NGSButtonAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				7E9A61D17C2A65038014F1D966409E73 /* Pod */,
+				D8D493101C5A0C1800A0F5E0 /* Pod */,
 				51A1BFCD980FE913D95601B45921B39A /* Support Files */,
 			);
 			name = NGSButtonAnimator;
@@ -204,6 +205,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D493151C5A0C1800A0F5E0 /* NGSAnimatedButton.h in Headers */,
+				D8D493171C5A0C1800A0F5E0 /* NGSButtonAnimator.h in Headers */,
 				BB27BF10217E0AD6599F12A054EA6FBA /* NGSButtonAnimator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8285D5D1E3A5F249D0F99C4843155B60 /* NGSButtonAnimator-dummy.m in Sources */,
-				01ACC8EAD927665D6A2DFAD9D33C4BD1 /* ReplaceMe.m in Sources */,
+				D8D493181C5A0C1800A0F5E0 /* NGSButtonAnimator.m in Sources */,
+				D8D493161C5A0C1800A0F5E0 /* NGSAnimatedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
