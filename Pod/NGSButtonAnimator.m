@@ -35,13 +35,28 @@
         [self lb_setup];
     } return self;
 }
+
+-(void)updateColorsWithPrimaryColor:(UIColor *)primColor secondaryColor:(UIColor *)secColor
+{
+    self.primaryColor = primColor;
+    self.secondaryColor = secColor;
+    
+    self.progressView.strokeColor = primColor;
+    self.shape.strokeColor = primColor;
+    
+    
+    [self.button setTitleColor:secColor forState:UIControlStateHighlighted];
+    [self.button setTitleColor:primColor forState:UIControlStateNormal];
+    
+    [self setHighlighted:self.button.highlighted];
+}
+
 -(void)lb_setup
 {
     
     //main shape
     DTShapeView *defaultShape = [[DTShapeView alloc] init];
     defaultShape.fillColor = [UIColor clearColor];
-    defaultShape.strokeColor = self.primaryColor;
     defaultShape.userInteractionEnabled = NO;
     defaultShape.path = [self bezierPath];
     
@@ -55,7 +70,6 @@
     //progress shape
     DTShapeView *shapeView = [[DTShapeView alloc] init];
     shapeView.fillColor = self.button.backgroundColor;
-    shapeView.strokeColor = self.primaryColor;
     
     [self.button addSubview:shapeView];
     [shapeView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -71,8 +85,7 @@
     self.progressView = shapeView;
     self.progressView.hidden = YES;
     
-    [self.button setTitleColor:self.secondaryColor forState:UIControlStateHighlighted];
-    [self.button setTitleColor:self.primaryColor forState:UIControlStateNormal];
+    [self updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
     
     [self updateView];
 }

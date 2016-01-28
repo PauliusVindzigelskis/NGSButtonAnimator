@@ -24,4 +24,6 @@
 -(void)setHighlighted:(BOOL)highlighted;
 - (void) updateView;
 
+- (void) updateColorsWithPrimaryColor:(UIColor*)primColor secondaryColor:(UIColor*)secColor;
+
 @end

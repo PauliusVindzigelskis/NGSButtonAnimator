@@ -47,11 +47,16 @@
 
 - (void) setupAnimator
 {
-    UIColor *firstColor = _primaryColor ? : [UIColor blackColor];
-    UIColor *secondColor = _secondaryColor ? : [UIColor whiteColor];
-    
-    _animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:firstColor secondaryColor:secondColor];
-    [_animator setHighlighted:self.isHighlighted];
+    if (!self.animator)
+    {
+        UIColor *firstColor = _primaryColor ? : [UIColor blackColor];
+        UIColor *secondColor = _secondaryColor ? : [UIColor whiteColor];
+        
+        self.animator = [[NGSButtonAnimator alloc] initWithButton:self primaryColor:firstColor secondaryColor:secondColor];
+        [self.animator setHighlighted:self.isHighlighted];
+    } else {
+        [self.animator updateColorsWithPrimaryColor:self.primaryColor secondaryColor:self.secondaryColor];
+    }
     
     [self setNeedsDisplay];
 }
@@ -59,11 +64,7 @@
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    if (!self.animator)
-    {
-        [self setupAnimator];
-    }
+    [self setupAnimator];
 }
 
 -(void)drawRect:(CGRect)rect
