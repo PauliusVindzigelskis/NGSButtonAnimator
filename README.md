@@ -7,11 +7,11 @@
 
 ## Usage
 
-### Using Xcode interface builder
+### init using Xcode interface builder
 
 Add UIButton and change it's subclass to NGSAnimatedButton
 
-### Programatically
+### init programatically
 
 ```objc
 NGSAnimatedButton *button = [[NGSAnimatedButton alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
@@ -20,13 +20,17 @@ button.center = CGPointMake(self.view.frame.size.width/2.f, self.view.frame.size
 [button setPrimaryColor:[UIColor blueColor]];
 [button setSecondaryColor:[UIColor yellowColor]];
 [self.view addSubview:button];
+```
 
-///...
+### state manipulation
 
+animate to spinner circle state
+```objc 
 [button.animator becomeCircleAnimated:YES completion:nil];
+```
 
-///...
-
+animate back to normal state
+```objc 
 [button.animator becomeNormalAnimated:YES completion:nil];
 ```
 
