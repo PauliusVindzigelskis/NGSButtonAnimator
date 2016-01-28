@@ -1,0 +1,6 @@
+framework module NGSButtonAnimator {
+  umbrella header "NGSButtonAnimator-umbrella.h"
+
+  export *
+  module * { export * }
+}

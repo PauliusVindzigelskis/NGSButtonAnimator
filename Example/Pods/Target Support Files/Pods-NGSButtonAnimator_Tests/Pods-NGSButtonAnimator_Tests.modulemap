@@ -1,0 +1,6 @@
+framework module Pods_NGSButtonAnimator_Tests {
+  umbrella header "Pods-NGSButtonAnimator_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
