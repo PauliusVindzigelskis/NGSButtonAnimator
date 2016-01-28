@@ -20,6 +20,14 @@ button.center = CGPointMake(self.view.frame.size.width/2.f, self.view.frame.size
 [button setPrimaryColor:[UIColor blueColor]];
 [button setSecondaryColor:[UIColor yellowColor]];
 [self.view addSubview:button];
+
+///...
+
+[button.animator becomeCircleAnimated:YES completion:nil];
+
+///...
+
+[button.animator becomeNormalAnimated:YES completion:nil];
 ```
 
 ## Requirements
